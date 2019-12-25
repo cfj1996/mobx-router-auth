@@ -1,26 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Routers from './router/routers'
+import './App.less'
+import IndexContext from './Context/IndexContext'
 
+const {Provider}  = IndexContext
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Provider value={{a:1, b:2}}><Routers /></Provider>
 }
 
 export default App;
